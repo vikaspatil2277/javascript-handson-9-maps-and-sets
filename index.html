@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps and Sets</title>
+</head>
+<body>
+
+   <center><h1> MAPS AND SETS</h1></center>
+    <h3>Q:1)"Problem: You are given a string (STR) of length N, consisting of only the lower case English alphabet.
+    Your task is to remove all the duplicate occurrences of characters in the string.</h3>
+       <pre>
+        let string="abcadeecfb";
+        let s=new Set();
+        for(let i=0;i< string.length;i++){
+            s.add(string[i]);
+        }
+
+        let result="";
+        for(let ch of s){
+            result=result+ch;
+        }
+        console.log(result);
+       </pre>
+    
+   <h3>
+    Q:2)"Problem: You are given a string (STR) of length N, you have to print the count of all alphabet(using maps)</h3>
+      
+    <pre>
+        let str="abcadeecfb";
+        let map=new Map();
+        for(let i=0;i< str.length;i++){
+            if(map.has(str[i])){
+                let value=map.get(str[i]);
+                map.set(str[i],value+1);
+            }
+            else{
+                map.set(str[i],1);
+            }
+        }
+        for(let [k,v] of map){
+             console.log(k+"="+v);
+        } 
+    </pre>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
